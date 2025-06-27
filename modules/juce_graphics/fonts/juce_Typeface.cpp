@@ -1037,9 +1037,10 @@ public:
             for (const auto& axis : axes)
             {
                 expect (axis.tag != 0);
+                expect (axis.tagString.isNotEmpty());
                 expect (axis.minValue <= axis.defaultValue);
                 expect (axis.defaultValue <= axis.maxValue);
-                expect (axis.name.isNotEmpty() || axis.name.isEmpty()); // Name might be empty
+                expect (axis.name.isNotEmpty());
             }
         }
     }
